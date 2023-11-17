@@ -417,3 +417,33 @@ button:focus {
     font-weight: bold;
     filter: brightness(70%);
 }
+
+/* Arrow up */
+.arrow-up {
+    position: fixed;
+    background-color: var(--color-text);
+    bottom: 3rem;
+    right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Footer */
+#contact {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.contact__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
