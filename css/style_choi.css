@@ -49,7 +49,7 @@ button {
 }
 
 button:focus {
-    outline: 1px solid transparent;
+    outline: 1px solid var(--color-accent);
 }
 
 /* Header */
@@ -86,24 +86,13 @@ button:focus {
     font-size: 1.8rem;
 }
 
-.header__toggle {
-    display: none;
-    color: var(--color-white);
-    font-size: 1.5rem;
-    position: absolute;
-    top: 1.3rem;
-    right: 1rem;
-}
-
 .header__menu {
     display: flex;
     gap: 4px;
 }
 
 .header__menu__item {
-    display: block;
     padding: 8px 16px;
-    border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover {
@@ -113,6 +102,10 @@ button:focus {
 .header__menu__item.active {
     border: 1px solid var(--color-accent);
     border-radius: 4px;
+}
+
+.header__menu__btn {
+    display: none;
 }
 
 /* Common */
@@ -484,27 +477,43 @@ button:focus {
     .header {
         flex-direction: column;
         align-items: start;
-        background-color: var(--color-primary);
     }
 
-    .header__toggle {
-        display: block;
+    .header__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .header__menu {
-        display: none;
         flex-direction: column;
         text-align: center;
-        margin: 1rem 4rem;
+        padding: 1rem 4rem;
         gap: 1rem;
     }
 
-    .header__menu.open {
-        display: flex;
+    .header__nav {
+        display: none;
+        width: 100%;
+        background-color: var(--color-primary);
     }
 
-    .header__nav {
-        width: 100%;
+    .header__menu__item {
+        display: block;
+        border-bottom: 1px solid transparent;
+    }
+
+    .header__menu__btn {
+        display: block;
+    }
+
+    .header__menu__btn i {
+        font-size: 1.5rem;
+    }
+
+    .nav__show {
+        display: block;
     }
 
     #home {

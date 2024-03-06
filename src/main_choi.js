@@ -35,7 +35,7 @@ function homeFadeOutOnScroll(element) {
 function asideArrowShowOnScroll() {
     const home = document.querySelector('#home');
     const homeHeight = home.offsetHeight;
-    const btnArrow = document.querySelector('.arrow-up');
+    const arrowUp = document.querySelector('.arrow-up');
     if(window.scrollY > homeHeight / 2) {
         arrowUp.style.opacity = 1;
         arrowUp.style.visibility = 'visible';
@@ -45,10 +45,27 @@ function asideArrowShowOnScroll() {
     }
 }
 
+function menuBtnOnClick(event) {
+    const headerNav = document.querySelector('.header__nav');
+
+    if (event.target.tagName === 'I' && event.target.className === 'fa-solid fa-bars') {
+        headerNav.classList.toggle('nav__show');
+    }
+    if (event.target.tagName === 'A' && (event.target.className === 'header__menu__item' || event.target.className === 'header__menu__item active')) {
+        headerNav.classList.remove('nav__show');
+    }
+
+}
+
 function scrollHandler() {
     headerStyleOnScroll();
     homeFadeOutOnScroll('.home__container');
     asideArrowShowOnScroll();
 }
 
+function clickEventHandler(e) {
+    menuBtnOnClick(e);
+}
+
 window.addEventListener('scroll', scrollHandler);
+window.addEventListener('click', clickEventHandler);
