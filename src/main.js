@@ -22,10 +22,10 @@ const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
     if(window.scrollY > homeHeight / 2) {
         arrowUp.style.opacity = 1;
-        arrowUp.style.pointerEvents = 'auto';
+        arrowUp.style.visibility = 'visible';
     } else {
         arrowUp.style.opacity = 0;
-        arrowUp.style.pointerEvents = 'none';
+        arrowUp.style.visibility = 'hidden';
     }
 })
 

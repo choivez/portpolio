@@ -36,12 +36,12 @@ function asideArrowShowOnScroll() {
     const home = document.querySelector('#home');
     const homeHeight = home.offsetHeight;
     const btnArrow = document.querySelector('.arrow-up');
-    if (window.scrollY >= homeHeight/2) {
-        btnArrow.style.opacity = 1;
-        btnArrow.style.pointerEvents = 'auto';
+    if(window.scrollY > homeHeight / 2) {
+        arrowUp.style.opacity = 1;
+        arrowUp.style.visibility = 'visible';
     } else {
-        btnArrow.style.opacity = 0;
-        btnArrow.style.pointerEvents = 'none';
+        arrowUp.style.opacity = 0;
+        arrowUp.style.visibility = 'hidden';
     }
 }
 
