@@ -23,7 +23,8 @@
         <!-- CSS -->
         <link rel="stylesheet" href="css/style_choi.css">
         <!-- JavaScript -->
-        <script src="src/main_choi.js" defer></script>
+        <script type="module" src="src/main_choi.js" defer></script>
+        <script type="module" src="src/projects_choi.js" defer></script>
     </head>
     <body>
         <!-- Header -->
@@ -199,28 +200,28 @@
                     <p class="description">Projects</p>
                     <ul class="categories">
                         <li>
-                            <button class="category category--selected">
+                            <button class="category category--selected" data-id="all">
                                 All <span class="category__count">8</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category">
+                            <button class="category" data-id="frontEnd">
                                 Front-end <span class="category__count">3</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category">
+                            <button class="category" data-id="backEnd">
                                 Back-end <span class="category__count">3</span>
                             </button>
                         </li>
                         <li>
-                            <button class="category">
+                            <button class="category" data-id="mobile">
                                 Mobile <span class="category__count">2</span>
                             </button>
                         </li>
                     </ul>
                     <ul class="projects">
-                        <li class="project">
+                        <li class="project" data-id="backEnd">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project1.webp" alt="project1" class="project__img">
                                 <div class="project__metadata">
@@ -229,7 +230,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-id="mobile">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project2.webp" alt="project2" class="project__img">
                                 <div class="project__metadata">
@@ -238,7 +239,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-id="frontEnd">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project3.webp" alt="project3" class="project__img">
                                 <div class="project__metadata">
@@ -247,7 +248,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-id="frontEnd">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project4.webp" alt="project4" class="project__img">
                                 <div class="project__metadata">
@@ -256,7 +257,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-id="backEnd">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project5.webp" alt="project5" class="project__img">
                                 <div class="project__metadata">
@@ -265,7 +266,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-id="backEnd">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project6.webp" alt="project6" class="project__img">
                                 <div class="project__metadata">
@@ -274,7 +275,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-id="mobile">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project7.webp" alt="project7" class="project__img">
                                 <div class="project__metadata">
@@ -283,7 +284,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project">
+                        <li class="project" data-id="frontEnd">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project8.webp" alt="project8" class="project__img">
                                 <div class="project__metadata">
