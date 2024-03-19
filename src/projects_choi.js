@@ -1,22 +1,35 @@
 'use strict';
 
+// 프로젝트 필터링 관련 로직 처리
 const categories = document.querySelector('.categories');
-const categoryBtns = document.querySelectorAll('.category');
 const projects = document.querySelectorAll('.project');
-
+const projectsContainer = document.querySelector('.projects');
 categories.addEventListener('click', (event) => {
-    if ((event.target.tagName === 'BUTTON') || (event.target.className === 'category')) {
-        categoryBtns.forEach((btn) => {
-            btn.classList.remove('category--selected');
-        })
-        event.target.classList.add('category--selected');
-
-        projects.forEach((project) => {
-            if ((event.target.dataset.id === 'all') || (event.target.dataset.id === project.dataset.id)) {
-                project.style.display = 'block';
-            } else {
-                project.style.display = 'none';
-            }
-        });
+    const filter = event.target.dataset.category;
+    if (filter == null) {
+        return;
     }
-})
+    handleActiveSelection(event.target);
+    filterProjects(filter);
+});
+
+function handleActiveSelection(target) {
+    const active = document.querySelector('.category--selected');
+    active.classList.remove('category--selected');
+    target.classList.add('category--selected');
+}
+
+function filterProjects(filter) {
+    projects.forEach((project)=>{
+        if (filter === 'all' || filter === project.dataset.type) {
+            project.style.display = 'block';
+        } else {
+            project.style.display = 'none';
+        }
+    });
+
+    projectsContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projectsContainer.classList.remove('anim-out');
+    }, 250);
+}
