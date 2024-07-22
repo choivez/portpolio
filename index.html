@@ -25,14 +25,18 @@
         <!-- JavaScript -->
         <script type="module" src="src/main.js" defer></script>
         <script type="module" src="src/projects.js" defer></script>
+        <script type="module" src="src/active_menu.js" defer></script>
     </head>
     <body>
         <!-- Header -->
-        <header class="header">
+        <header class="header" id="header">
             <div class="header__inner">
                 <div class="header__logo">
                     <img class="header__logo__img" src="images/favicon.ico" alt="logo">
                     <h1 class="header__logo__title"><a href="#">Choivez</a></h1>
+                </div>
+                <div class="header__menu__btn">
+                    <a href="javascript:void(0)"><i class="fa-solid fa-bars"></i></a>
                 </div>
             </div>
             <nav class="header__nav">
@@ -45,19 +49,16 @@
                     <li><a class="header__menu__item" href="#contact">Footer</a></li>
                 </ul>
             </nav>
-            <button class="header__toggle" aria-label="navigation menu toggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </header>
         <!-- Main -->
-        <main>
+        <main id="main">
             <!-- Home -->
             <section id="home">
                 <div class="home__container">
                     <img class="home__avatar" src="images/profile.png" alt="최베즈의 프로필">
                     <h2 class="home__title">
                         Hello, <br />I&#39;m
-                        <strong class="home__title--strong">Dream Coder</strong>, Choivez</h2>
+                        <strong class="home__title--strong"></strong>, Choivez</h2>
                     <p class="home__description">A front-End engineer residing in Seoul, Korea</p>
                     <a class="home__contact" href="#contact">Contact Me</a>
                 </div>
@@ -221,7 +222,7 @@
                         </li>
                     </ul>
                     <ul class="projects">
-                        <li class="project" data-type="front-end">
+                        <li class="project" data-type="back-end">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project1.webp" alt="project1" class="project__img">
                                 <div class="project__metadata">
@@ -230,7 +231,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project" data-type="front-end">
+                        <li class="project" data-type="mobile">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project2.webp" alt="project2" class="project__img">
                                 <div class="project__metadata">
@@ -239,7 +240,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project" data-type="back-end">
+                        <li class="project" data-type="front-end">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project3.webp" alt="project3" class="project__img">
                                 <div class="project__metadata">
@@ -266,7 +267,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project" data-type="mobile">
+                        <li class="project" data-type="back-end">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project6.webp" alt="project6" class="project__img">
                                 <div class="project__metadata">
@@ -284,7 +285,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="project" data-type="back-end">
+                        <li class="project" data-type="front-end">
                             <a href="#" target="_blank">
                                 <img src="images/projects/project8.webp" alt="project8" class="project__img">
                                 <div class="project__metadata">
